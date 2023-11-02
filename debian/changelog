@@ -1,5 +1,110 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-lupa (1.14.1+dfsg-1) unstable; urgency=low
 
-  * Initial release
+  * New upstream release.
+  * Bump Standards-Version to 4.6.1.0.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Michael Fladischer <fladi@debian.org>  Sat, 19 Nov 2022 21:51:24 +0000
+
+python-lupa (1.13+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Depend on python3-all for autopkgtests.
+  * Update year in d/copyright.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 09 Mar 2022 21:55:15 +0000
+
+python-lupa (1.10+dfsg-1) unstable; urgency=low
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Bump debhelper version to 13.
+  * Bump Standards-Version to 4.6.0.1.
+  * Use uscan version 4.
+  * Enable upstream testsuite for autopkgtests.
+
+ -- Michael Fladischer <fladi@debian.org>  Tue, 19 Oct 2021 21:09:54 +0000
+
+python-lupa (1.9+dfsg-1) unstable; urgency=low
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Acknowledge d/watch fix by Diego M. Rodriguez <diego@moreda.io> but
+    restore repack suffix.
+  * Drop Python3 support patche, integrated upstream.
+  * Bump Standards-Version to 4.5.0.
+  * Set Rules-Requires-Root: no.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 05 Feb 2020 13:57:29 +0100
+
+python-lupa (1.6+dfsg-4) unstable; urgency=low
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Michael Fladischer ]
+  * Bump debhelper version to 12.
+  * Bump Standards-Version to 4.4.0.
+  * Remove Python2 support.
+
+ -- Michael Fladischer <fladi@debian.org>  Fri, 26 Jul 2019 11:25:43 +0200
+
+python-lupa (1.6+dfsg-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+
+  [ Michael Fladischer ]
+  * Rely on liblua in case libluajit is not available, thanks to
+    Frédéric Bonnard for the patch (Closes: #892906).
+  * Clean up lupa/_lupa.so to allow two builds in a row.
+  * Bump Standards-Version to 4.1.5.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 26 Jul 2018 23:03:44 +0200
+
+python-lupa (1.6+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Ondřej Kobližek ]
+  * d/control: Python2 package enable
+  * d/rules: Python2 package enable
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Thu, 05 Apr 2018 07:57:23 +0200
+
+python-lupa (1.6+dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add debian/gbp.conf.
+  * Bump debhelper compatibility and version to 11.
+  * Bump Standards-Version to 4.1.3.
+  * Run wrap-and-sort -bast to reduce diff size of future changes.
+  * Clean up lupa.egg-info/PKG-INFO to allow two builds in a row.
+  * Add patch to fix reading UTF-8 files in setup.py for Python3.
+  * Enable autopkgtest-pkg-python testsuite.
+
+ -- Michael Fladischer <fladi@debian.org>  Mon, 08 Jan 2018 22:00:01 +0100
+
+python-lupa (1.5+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #878973).
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 18 Oct 2017 08:44:42 +0200
