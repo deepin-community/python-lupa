@@ -1,15 +1,45 @@
-Source: template-repository
-Section: unknown
+Source: python-lupa
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders:
+ Michael Fladischer <fladi@debian.org>,
+Build-Depends:
+ cython3,
+ debhelper-compat (= 13),
+ dh-python,
+ libluajit-5.1-dev [!s390x !alpha !hppa !ia64 !m68k !powerpcspe !sh4 !sparc64] | liblua5.1-0-dev,
+ pkg-config,
+ python3-all,
+ python3-all-dev,
+ python3-setuptools,
+Standards-Version: 4.6.1.0
+Homepage: https://github.com/scoder/lupa/
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-lupa
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-lupa.git
+Testsuite: autopkgtest-pkg-python
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: python3-lupa
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends},
+Description: Python wrapper around LuaJIT or Lua (Python3 version)
+ Lupa integrates the runtimes of Lua or LuaJIT2 into CPython. It is a partial
+ rewrite of LunaticPython in Cython with some additional features such as proper
+ coroutine support.
+ .
+ Features:
+  * separate Lua runtime states through a LuaRuntime class
+  * Python coroutine wrapper for Lua coroutines
+  * iteration support for Python objects in Lua and Lua objects in Python
+  * proper encoding and decoding of strings (configurable per runtime, UTF-8 by
+    default)
+  * frees the GIL and supports threading in separate runtimes when calling into
+    Lua
+  * written for LuaJIT2, but also works with the normal Lua interpreter
+  * easy to hack on and extend as it is written in Cython, not C
+ .
+ This package contains the Python 3 version of the library.

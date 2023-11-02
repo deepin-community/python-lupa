@@ -1,0 +1,5 @@
+lupa/_lupa.c
+lupa/_lupa.*.so
+lupa/_lupa.so
+lupa.egg-info/SOURCES.txt
+lupa.egg-info/PKG-INFO
