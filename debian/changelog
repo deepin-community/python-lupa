@@ -1,3 +1,9 @@
+python-lupa (1.14.1+dfsg-1deepin1) unstable; urgency=medium
+
+  * No source change upload against python 3.12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 09:55:23 +0200
+
 python-lupa (1.14.1+dfsg-1) unstable; urgency=low
 
   * New upstream release.
