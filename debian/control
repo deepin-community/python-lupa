@@ -8,7 +8,7 @@ Build-Depends:
  cython3,
  debhelper-compat (= 13),
  dh-python,
- libluajit-5.1-dev [!s390x !alpha !hppa !ia64 !m68k !powerpcspe !sh4 !sparc64] | liblua5.1-0-dev,
+ libluajit-5.1-dev [!s390x !alpha !hppa !ia64 !m68k !powerpcspe !sh4 !sparc64 !sw64] | liblua5.1-0-dev,
  pkg-config,
  python3-all,
  python3-all-dev,
